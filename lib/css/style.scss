@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import "./header";
+@import "./main";
+@import "./footer";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 18px;
+    line-height: 1.2em;
+    color: var(--primary-color);
+    font-weight: 600;
+    min-height: 22px;
+    letter-spacing: .120em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+:root {
+    --primary-color: #000000;
+    --orange-color: #fdcb5c;
+}
+
+body {
+    font-size: 14px;
+    color: var(--primary-color);
+    line-height: 28px;
+    font-weight: 400;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.row {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 24px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #1c73ea;
+}
+
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+textarea {
+    overflow: hidden;
+    resize: none;
+}
+
+button {
+    outline: none !important;
+    cursor: pointer;
+}
+
+p,
+.text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    font-weight: normal;
+    margin: 0px;
+    background: none;
+    line-height: 1.2em;
+    color: var(--primary-color);
+    font-family: 'Lato', sans-serif;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+
+.pd-100 {
+    padding: 100px 0;
+    @media(max-width: 767px) {
+        padding: 50px 0;
+    }
+}
+
+.mg-100 {
+    margin: 100px 0;
+    @media(max-width: 767px) {
+        margin: 50px 0;
+    }
+}
+
+.pt-100 {
+    padding-top: 100px;
+    @media(max-width: 767px) {
+        padding-top: 50px;
+    }
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+    @media(max-width: 767px) {
+        padding-bottom: 50px;
+    }
+}
+
+.mt-100 {
+    margin-top: 100px;
+    @media(max-width: 767px) {
+        margin-top: 50px;
+    }
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+    @media(max-width: 767px) {
+        margin-bottom: 50px;
+    }
+}
+
+.mgy-25 {
+    margin: 25px 0;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+#worker_1 {
+    display: none;
+}
+
+// div#ui-datepicker-div {
+//     width: 300px;
+// }
+// .ui-widget-header {
+//     border: none;
+//     background-color: transparent;
+// }
+// .ui-state-default {
+//     display: block;
+//     border: none !important;
+//     background-color: transparent !important;
+// }
+// .ui-datepicker td span,
+// .ui-datepicker td a {
+//     text-align: center;
+//     border-radius: 50%;
+//     width: 40px;
+//     height: 40px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: auto;
+// }
+// .ui-state-default.ui-state-hover,
+// .ui-state-default.ui-state-highlight.ui-state-hover,
+// .ui-state-default.ui-state-active {
+//     border: 1px solid #ffffff !important;
+//     background: #000000 !important;
+//     color: #ffffff;
+// }
+// .ui-state-default.ui-state-highlight {
+//     color: #000000;
+//     font-weight: bold;
+// }
+.btn {
+    border-radius: 0;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.btn1 {
+    color: #000000;
+    padding: 10px 40px;
+    font-weight: 700;
+    border: 2px solid var(--orange-color);
+    background-color: var(--orange-color);
+    @media(max-width: 1024px) {
+        padding: 10px 20px;
+    }
+}
+
+.btn1:hover {
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+
+.section-title {
+    position: relative;
+    .subtitle {
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 500;
+        transition: all .3s linear;
+        color: var(--primary-color);
+        text-transform: uppercase;
+    }
+    h3 {
+        font-size: 38px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        transition: all 100ms linear;
+    }
+    h2 {
+        position: relative;
+        display: block;
+        font-size: 48px;
+        line-height: 62px;
+        color: var(--primary-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 100ms linear;
+        @media(max-width: 1400px) {
+            font-size: 38px;
+            line-height: 48px;
+        }
+        @media(max-width:767px) {
+            font-size: 32px;
+            line-height: 1.2em;
+        }
+    }
+    p {
+        position: relative;
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--primary-color);
+        font-weight: 400;
+        margin-top: 20px;
+    }
+    .btn-link {
+        color: var(--primary-color);
+        font-size: 18px;
+        line-height: 24px;
+        text-decoration: none;
+        i {
+            transition: all .3s ease;
+        }
+        &:hover {
+            color: var(--orange-color);
+            i {
+                transform: translateX(10px);
+                transition: all .3s ease;
+            }
+        }
+    }
+}
+
+// .owl-theme .owl-dots .owl-dot span {
+//     width: 12px;
+//     height: 12px;
+// }
+// .owl-theme .owl-dots .owl-dot.active {
+//     span {
+//         position: relative;
+//         display: block;
+//         background: #fe7424 !important;
+//         width: 36px;
+//         height: 12px;
+//     }
+// }
+figure {
+    margin-bottom: 0;
+}
+
+.bd-gadient {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(210 243 128 / 50%), #fdcb5c, rgb(210 243 128 / 50%));
+    border-image-slice: 1;
+}

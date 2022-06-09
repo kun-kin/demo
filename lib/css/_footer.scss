@@ -1,0 +1,117 @@
+#backtotop {
+    position: fixed;
+    z-index: 1000;
+    background: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    bottom: 25px;
+    right: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50%;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: #000;
+    }
+}
+
+#backtotop.show {
+    display: block;
+}
+
+.footer {
+    position: relative;
+    background: var(--primary-color);
+    background-image: url('../../images/bn4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .footer-main {
+        .footer-logo {
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .footer-content {
+            background-color: white;
+            padding: 30px 0;
+            h3 {
+                font-size: 38px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                transition: all 100ms linear;
+            }
+            .footer-column {
+                padding-left: 20px;
+                border-left: 2px solid var(--orange-color);
+                min-height: 170px;
+                .footer-title {
+                    margin-bottom: 20px;
+                    font-size: 32px;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    color: linear-gradient(0.25turn, rgb(210 243 128 / 50%), #fdcb5c, rgb(210 243 128 / 50%));
+                }
+                p {
+                    margin-bottom: 15px;
+                    a {
+                        color: var(--primary-color);
+                        font-weight: 700;
+                        &:hover {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+            .image {
+                max-width: 50%;
+                width: 50%;
+                @media(max-width: 767px) {
+                    margin-bottom: 30px;
+                }
+            }
+            .social-link {
+                margin-top: 30px;
+                ul {
+                    margin-left: 100px;
+                    li {
+                        margin-right: 10px;
+                        display: inline-block;
+                        a {
+                            display: block;
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 8px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+                        }
+                    }
+                    .facebook {
+                        a {
+                            background-color: #3b5999;
+                        }
+                    }
+                    .youtube {
+                        a {
+                            background-color: #ce201f;
+                        }
+                    }
+                    .instagram {
+                        a {
+                            background-color: #262626;
+                        }
+                    }
+                }
+                @media(max-width:767px) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
