@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monter</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+    <link rel="stylesheet" href="./lib/css/style.css">
+    <style>
+        .recruit .recruit-item {
+            background: #f1f1f1;
+            border-top: 1px solid #c5c5c5;
+            border-bottom: 1px solid #c5c5c5;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .recruit .recruit-item .recruit-item__inner {
+            position: relative;
+        }
+        
+        .recruit .recruit-item .recruit-item__inner .item-featured {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .recruit .recruit-item .recruit-item__inner .item-featured img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .recruit .recruit-item .recruit-item__inner .item-content {
+            max-width: 80%;
+            position: relative;
+            padding-left: 100px;
+        }
+        
+        .recruit .recruit-item .recruit-item__inner .item-content .view-more {
+            display: block;
+            font-size: 18px;
+            color: red;
+            text-decoration: none;
+            margin-top: 10px;
+            text-transform: capitalize;
+            transition: all .3s ease;
+            border: none;
+        }
+        
+        .recruit .recruit-item .recruit-item__inner .item-content .view-more:hover {
+            text-decoration: underline;
+            transition: all .3s ease;
+        }
+        
+        .recruit .recruit-item .recruit-item__inner .item-content .recruit-title {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 15px;
+        }
+        
+        .recruit .recruit-item .recruit-item__inner .item-content .recruit-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .recruit-item__inner .inner-job {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+        .recruit-item__inner .inner-job a {
+            background-color: #e8be2f;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 10px 24px;
+            border-radius: 4px;
+        }
+        
+        .recruit-item__inner .inner-job a:hover {
+            background-color: #dbb63b;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 0;
+        }
+        
+        .modal-recruit-item h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .modal-recruit-item .meta {
+            font-size: 16px;
+            color: #717171;
+        }
+        
+        .modal-recruit-item i {
+            margin-right: 5px;
+        }
+        
+        .modal-recruit-item .content .bottom-detail {
+            margin-top: 20px;
+        }
+        
+        .modal-recruit-item .content .bottom-detail a {
+            cursor: pointer;
+            display: inline-block;
+            height: 40px;
+            line-height: 43px;
+            background-color: #00baba;
+            padding: 0 16px;
+            margin-right: 7px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="header-main">
+                <div class="container">
+                    <div class="row">
+                        <a href="./index.html" class="logo">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                        <div class="header-column-right">
+                            <div class="top">
+                                <div class="language">
+                                    <span>
+                                        <img src="./images/gb.png" alt="">
+                                    </span>
+                                    <select name="" id="">
+                                        <option value="">
+                                            English
+                                        </option>
+                                        <option value="">
+                                            việt nam
+                                        </option>
+                                    </select>
+                                </div>
+                                <div id="header">
+                                    <a href="#menu" id="menu-toggle">
+                                        <span>
+                                            <!-- <i class="fa-solid fa-bars"></i> -->
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <nav class="menu">
+                                <ul class="menu-list">
+                                    <li class="menu-item active">
+                                        <a href="./about.html" class="menu-link">about us</a>
+                                    </li>
+                                    <li class="menu-item active">
+                                        <a href="./rooms.html" class="menu-link">rooms</a>
+                                    </li>
+                                    <li class="menu-item active">
+                                        <a href="./dining.html" class="menu-link">dining</a>
+                                    </li>
+                                    <li class="menu-item active">
+                                        <a href="./service.html" class="menu-link">service</a>
+                                    </li>
+                                    <li class="menu-item active">
+                                        <a href="./recruit.html" class="menu-link">recruitment</a>
+                                    </li>
+                                    <li class="menu-item active">
+                                        <a href="./contact.html" class="menu-link">contact</a>
+                                    </li>
+
+                                </ul>
+                                <a href="" class="btn btn1">book now</a>
+                            </nav>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="banner">
+                <div class="banner-img owl-carousel owl-theme">
+                    <div class="banner-item">
+                        <img src="./images/banner.jpg" alt="">
+                    </div>
+                    <div class="banner-item">
+                        <img src="./images/banner.jpg" alt="">
+                    </div>
+                    <div class="banner-item">
+                        <img src="./images/banner.jpg" alt="">
+                    </div>
+                    <div class="banner-item">
+                        <img src="./images/banner.jpg" alt="">
+                    </div>
+                </div>
+                <div class="banner-content">
+                    <form action="" class="form-available">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-item form-group">
+                                    <label for="">
+                                        check in
+                                    </label>
+                                    <input type="text" class="form-control" value="15/05/2022" id="date1">
+                                </div>
+                                <div class="col-item form-group">
+                                    <label for="">
+                                        check out
+                                    </label>
+                                    <input type="text" class="form-control" value="25/05/2022" id="date2">
+                                </div>
+                                <div class="col-item form-group">
+                                    <label for="">
+                                        rooms
+                                    </label>
+                                    <select class="form-control">
+                                        <option value="1">
+                                            1
+                                        </option>
+                                        <option value="1">
+                                            2
+                                        </option>
+                                        <option value="1">
+                                            3
+                                        </option>
+                                        <option value="1">
+                                            4
+                                        </option>
+                                        <option value="1">
+                                            5
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-item form-group">
+                                    <label for="">
+                                        adults
+                                    </label>
+                                    <select class="form-control">
+                                        
+                                        <option value="1">
+                                            1
+                                        </option>
+                                        <option value="1">
+                                            2
+                                        </option>
+                                        <option value="1">
+                                            3
+                                        </option>
+                                        <option value="1">
+                                            4
+                                        </option>
+                                        <option value="1">
+                                            5
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-item form-group">
+                                    <label for="">
+                                        children
+                                    </label>
+                                    <select class="form-control">
+                                        <option value="">0</option>
+                                        <option value="1">
+                                            1
+                                        </option>
+                                        <option value="1">
+                                            2
+                                        </option>
+                                        <option value="1">
+                                            3
+                                        </option>
+                                        <option value="1">
+                                            4
+                                        </option>
+                                        <option value="1">
+                                            5
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-item form-btn">
+                                    <a href="" class="btn btn1">search</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <div class="recruit">
+                <div class="recruit-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="recruit-list">
+                                    <div class="recruit-item">
+                                        <div class="recruit-item__inner">
+                                            <div class="item-featured">
+                                                <a href="">
+                                                    <img src="https://www.techsignin.com/wp-content/uploads/2016/08/vinh-danh-steve-jobs-thay-doi-nhiep-anh-3.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="item-content">
+                                                <h2 class="recruit-title">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorem nam sed a minus cumque quia delectus velit
+                                                </h2>
+                                                <p class="recruit-text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor porro tempora, itaque voluptatum non adipisci quae, quia, aspernatur impedit aperiam excepturi voluptate deleniti sapiente cupiditate reiciendis iure eligendi. Neque.
+                                                </p>
+                                                <button type="button" class="view-more" data-toggle="modal" data-target="#exampleModalCenter">
+                                                    view more
+                                                  </button>
+
+
+                                            </div>
+                                            <div class="inner-job"><a href="">job detail</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="recruit-item">
+                                        <div class="recruit-item__inner">
+                                            <div class="item-featured">
+                                                <a href="">
+                                                    <img src="https://www.techsignin.com/wp-content/uploads/2016/08/vinh-danh-steve-jobs-thay-doi-nhiep-anh-3.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="item-content">
+                                                <h2 class="recruit-title">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorem nam sed a minus cumque quia delectus velit
+                                                </h2>
+                                                <p class="recruit-text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor porro tempora, itaque voluptatum non adipisci quae, quia, aspernatur impedit aperiam excepturi voluptate deleniti sapiente cupiditate reiciendis iure eligendi. Neque.
+                                                </p>
+                                                <a href="" class="view-more">view more</a>
+
+                                            </div>
+                                            <div class="inner-job"><a href="">job detail</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="recruit-item">
+                                        <div class="recruit-item__inner">
+                                            <div class="item-featured">
+                                                <a href="">
+                                                    <img src="https://www.techsignin.com/wp-content/uploads/2016/08/vinh-danh-steve-jobs-thay-doi-nhiep-anh-3.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="item-content">
+                                                <h2 class="recruit-title">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorem nam sed a minus cumque quia delectus velit
+                                                </h2>
+                                                <p class="recruit-text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor porro tempora, itaque voluptatum non adipisci quae, quia, aspernatur impedit aperiam excepturi voluptate deleniti sapiente cupiditate reiciendis iure eligendi. Neque.
+                                                </p>
+                                                <a href="" class="view-more">view more</a>
+
+                                            </div>
+                                            <div class="inner-job"><a href="">job detail</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="sidebar">
+                                    <div class="widget search-job">
+                                        <h4 class="widget-title">Search Job</h4>
+                                        <form action="" class="widget-search">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Keyword">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">job category</label>
+                                                <select name="" id="job-category" class="form-control">
+                                                    <option class="" value="accountant">Accountant</option>
+                                                    <option class="" value="agriculture">Agriculture</option>
+                                                    <option class="" value="architecture">Architecture</option>
+                                                    <option class="" value="auditor">Auditor</option>
+                                                    <option class="" value="aviation">Aviation</option>
+                                                    <option class="" value="back-end-developer">Back-end Developer</option>
+                                                    <option class="" value="banking">Banking</option>
+                                                    <option class="" value="beautician">Beautician</option>
+                                                    <option class="" value="bomb-disposal">Bomb Disposal</option>
+                                                    <option class="" value="call-center">Call Center</option>
+                                                    <option class="" value="cameraman">Cameraman</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">job type</label>
+                                                <select name="type" id="job-type" class="form-control">
+                                                    <option value="" selected="selected">Job Type</option>
+                                                    <option class="level-0" value="contract">Contract</option>
+                                                    <option class="level-0" value="freelance">Freelance</option>
+                                                    <option class="level-0" value="full-time-jobs">Full Time</option>
+                                                    <option class="level-0" value="part-time">Part Time</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">job location</label>
+                                                <select name="location" id="job-location" class="form-control">
+                                                    <option value="" selected="selected">Job Locations</option>
+                                                    <option class="level-0" value="azad-kashmir">Azad Kashmir</option>
+                                                    <option class="level-0" value="balochistan">Balochistan</option>
+                                                    <option class="level-0" value="faisalabad">Faisalabad</option>
+                                                    <option class="level-0" value="fata">Fata</option>
+                                                    <option class="level-0" value="gilgit-baltistan">Gilgit Baltistan</option>
+                                                    <option class="level-0" value="gujranwala">Gujranwala</option>
+                                                    <option class="level-0" value="gwadar">Gwadar</option>
+                                                    <option class="level-0" value="hyderabad">Hyderabad</option>
+                                                    <option class="level-0" value="islamabad">Islamabad</option>
+                                                    <option class="level-0" value="karachi">Karachi</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group form-btn">
+                                                <button type="submid" class="btn btn-submid" style="background-color:#e8be2f ;color:#fff;margin-right:10px">search</button>
+                                                <button type="reset" class="btn btn-light"><i class="fa-solid fa-rotate-right"></i> reset</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+
+        <footer class="footer">
+
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <div class="footer-content">
+                    <div class="container">
+                        <h3>
+                            contact
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="footer-column">
+                                    <div class="footer-title">
+                                        hotel
+                                    </div>
+                                    <p>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <a href="">
+                                            63 Tran Hung Dao St, Ward 1, Vung Tau City
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <i class="fa-solid fa-phone"></i>
+                                        <a href="tel:+0961085869">0961085869</a>
+                                    </p>
+                                    <p>
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <a href="mailto:sales@montercarlohotel.vn">sales@montercarlohotel.vn</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-column">
+                                    <div class="footer-title">
+                                        E-gaming club
+                                    </div>
+                                    <p>
+                                        <i class="fa-solid fa-phone"></i>
+                                        <a href="tel:+0932661000">0932661000</a>
+                                    </p>
+                                    <p>
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <a href="mailto:club@montercarlohotel.vn">club@montercarlohotel.vn</a>
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="image">
+                                    <img src="./images/huong-dan-dang-ky-website-voi-Bo-Cong-Thuong-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="social-link">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="youtube">
+                                            <a href="">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <a href="" id="backtotop"><i class="fa-solid fa-arrow-up-long"></i></a>
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+                </div>
+                <div class="modal-body modal-recruit-item">
+                    <h2>
+                        Tuyển nhân viên hành chính nhân sự
+                    </h2>
+                    <ul class="meta">
+                        <li><i class="fa-solid fa-calendar-days"></i> 25,Match 2022</li>
+                    </ul>
+                    <div class="content">
+                        <p><strong>Công ty:</strong>iit techcom</p>
+                        <p><strong>Vị trí công việc:</strong>nhân viên hành chính</p>
+                        <p><strong>Mức lương:</strong>7 triệu - 12 triệu</p>
+                        <p><strong>Hạn nộp hồ sơ:</strong>20/12/2022</p>
+                        <br>
+                        <h3 class="title">Mô tả công việc</h3>
+                        <div class="detaijob">
+                            -Đọc và kiểm tra lỗi chính tả tài liệu tiếng Việt<br>-Sửa lỗi chính tả tiếng Việt<br>-Báo cáo công việc đến QL Team<br>- Số lượng: 100 trang/bộ tài liệu, trong khoảng 2h30p sẽ hoàn thành<br>- Giá dự kiến: 200k/1 bộ tài liệu<br>-
+                            Thời gian: từ 8h đến 21h hằng ngày.Linh động khung giờ tự sắp xếp. </div>
+                        <h3 class="title">Quyền lợi được hưởng</h3>
+                        <div class="detaijob">
+                            quyền lợi được hưởng<br>- Linh động thời gian theo bản thân tự sắp xếp<br>- Có thể làm Online tại nhà<br>- Chế độ lương hấp dẫn theo năng suất </div>
+                        <h3 class="title">Yêu cầu công việc</h3>
+                        <div class="detaijob">
+                            - Làm việc cẩn thận, chịu khó đọc tài liệu<br>- Trung thực, làm việc có trách nhiệm với công việc và bản thân<br>- Thành thạo với Word<br>- Có tài khoản ngân hàng đã đăng ký banking (dùng để chuyển lương)<br>- Trên 25 tuổi
+                        </div>
+                        <h3 class="title">Thông tin liên hệ</h3>
+                        <div class="detaijob">
+                            <p>
+                                <span>Người liên hệ:</span>
+                                <span></span>
+                            </p>
+                            <p>
+                                <span>Địa chỉ:</span>
+                                <span>
+                                    32 Nguyễn Thái Bình Phường 4
+                                </span>
+                            </p>
+                            <p>
+                                <span>Hạn nộp hồ sơ:</span>
+                                <span>
+                                    20/10/2022
+                                </span>
+                            </p>
+                        </div>
+                        <div class="bottom-detail">
+                            <span>
+                                <a href=""><i class="fa-solid fa-download"></i>lưu công việc</a>
+                            </span>
+                            <span>
+                                <a href=""><i class="fa-solid fa-file-arrow-up"></i>ứng tuyển ngay</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/js/jquery-3.6.0.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="./lib/mmenu/mmenu.js"></script>
+    <script src="./lib/js/style.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>
